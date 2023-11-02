@@ -15,19 +15,20 @@ const contactDetails: ContactDetail[] = [
         ]
     },
     {
-        title: "Business Details",
-        listItems: [
-            { text: "Location: Montebello, California", linkTo: null }
-        ]
-    },
-    {
-        title: "Other Socials",
+        title: "Social Media",
         listItems: [
             {text: "Instagram", linkTo: "https://www.instagram.com/jay.develops"},
             {text: "LinkedIn", linkTo: "https://www.linkedin.com/in/jesusperezarias/"},
             {text: "Twitter", linkTo: "https://twitter.com/jay_develops"},
             {text: "BlueSky", linkTo: "https://bsky.app/profile/jesusperez.dev"},
         ]
-    }
+    },
+    {
+        title: "Business Details",
+        listItems: [
+            { text: "Location: Montebello, California", linkTo: null },
+            { text: "Open To: Full-Time & Freelance Work", linkTo: null }
+        ]
+    },
 ]
 export default contactDetails
