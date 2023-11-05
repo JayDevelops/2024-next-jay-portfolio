@@ -1,6 +1,6 @@
 "use client"
 import React, {useRef, useState} from "react"
-import {toast} from "sonner";
+import {toast} from "sonner"
 import FormComponent from "./FormComponent"
 import {sendEmail} from "@/components/Contact/ContactForm/emailService"
 

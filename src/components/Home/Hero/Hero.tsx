@@ -1,8 +1,6 @@
-import {Button} from "@/components/ui/button"
-import Link from "next/link"
 import dynamic from "next/dynamic"
 import React from "react"
-import Balancer from "react-wrap-balancer";
+import HeroRightButtons from "@/components/Home/Hero/HeroRightButtons"
 
 export default function Hero() {
     const DynamicComputerModel: React.ComponentType<{}> = dynamic(() => import("@/components/Models/Computer/Computer"), {loading: () => <p>Loading...</p>,})
@@ -20,16 +18,8 @@ export default function Hero() {
                         Based in Los Angeles, CA with over three years experience in MERN stack and Next.js, crafting stunning dynamic full-stack web applications, and mobile app development.
                         I specialize in software solutions, contact me for your business needs; available for full-time & freelance work.
                     </p>
-                    <div className="flex justify-center md:justify-start items-center md:text-center gap-4">
-                        <Link href={`/contact`}>
-                            <Button className="text-left">Contact Me</Button>
-                        </Link>
-                        <Link href={`/projects`}>
-                            <Button variant="secondary" className="text-left">
-                                All My Projects
-                            </Button>
-                        </Link>
-                    </div>
+
+                    <HeroRightButtons />
                 </div>
             </div>
 

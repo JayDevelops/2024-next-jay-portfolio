@@ -1,6 +1,5 @@
 "use client"
 import ContactForm from "@/components/Contact/ContactForm/ContactForm"
-import Earth from "@/components/Models/Earth/Earth"
 import {Toaster} from "sonner"
 import dynamic from "next/dynamic"
 import React from "react"

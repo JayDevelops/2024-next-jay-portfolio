@@ -24,7 +24,7 @@ const contactDetails: ContactDetail[] = [
         ]
     },
     {
-        title: "Business Details",
+        title: "Other Details",
         listItems: [
             { text: "Location: Montebello, California", linkTo: null },
             { text: "Open To: Full-Time & Freelance Work", linkTo: null }

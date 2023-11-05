@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from "@/components/ui/button";
+import {CaretRightIcon} from "@radix-ui/react-icons";
 
 interface FormComponentProps {
     form: {
@@ -61,9 +62,17 @@ export default function FormComponent({ form, loading, handleSubmit, handleChang
                 <div className="text-left">
                     <Button
                         type="submit"
-                        className="py-3 px-8 font-bold text-lg w-1/5 bg-primary text-primary-foreground rounded-full hover:bg-amber-700 transition-all"
+                        className="hover:bg-amber-700 transition-all"
                     >
-                        {loading ? 'Sending...': 'Send'}
+                        {loading ? (
+                            <>
+                                <span className="mr-1">Sending...</span><svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24" />
+                            </>
+                            ): (
+                            <>
+                                Send <CaretRightIcon className="mr-2 h-4 w-4" />
+                            </>
+                        )}
                     </Button>
                 </div>
             </form>
