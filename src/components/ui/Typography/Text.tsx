@@ -26,3 +26,20 @@ export function Text({ children, variant = "normal", className }: TextProps) {
         </p>
     )
 }
+
+
+export function BlockQuote({ children, variant = "normal", className }: TextProps) {
+    const textSizeClasses = {
+        small: "text-sm",
+        normal: "text-base",
+        large: "text-lg",
+    }
+
+    return (
+        <blockquote
+            className={classNames("mt-6 border-l-2 pl-6 italic", textSizeClasses[variant], className)}
+        >
+            {children}
+        </blockquote>
+    )
+}
