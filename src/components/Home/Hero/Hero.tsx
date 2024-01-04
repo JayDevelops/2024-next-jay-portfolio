@@ -23,7 +23,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Right content - Computer model */}
+            {/* Right content - Computer model */}c
             <div className="md:w-[700px] md:h-[240px] h-[180px] w-[500px] md:relative">
                 <DynamicComputerModel />
             </div>

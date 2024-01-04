@@ -7,7 +7,7 @@ import React from "react"
 type MotionButtonProps = {
     buttonVariant: "link" | "outline" | "default" | "destructive" | "secondary" | "ghost" | null | undefined,
     buttonText: string,
-    icon: any,
+    icon: any | null | "",
 }
 export default function MotionButton({buttonVariant, buttonText, icon: Icon}: MotionButtonProps) {
     const floatFromRight = {
