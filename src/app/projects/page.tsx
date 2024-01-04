@@ -1,6 +1,6 @@
 import {client} from "@/lib/sanity"
 import React from "react"
-import ProjectCard from "@/components/Projects/ProjectCard"
+import ProjectCard from "@/app/projects/ProjectCard"
 import {Metadata} from "next";
 
 export default async function Projects() {
