@@ -13,7 +13,7 @@ type HeadingOneH1Props = PropsWithChildren<{
     classNames?: string
 }>
 
-export function HeadingOneH1({children, color = "primary", classNames = "", }: HeadingOneH1Props) {
+export function HeadingOne({children, color = "primary", classNames = "", }: HeadingOneH1Props) {
     // If the passed children react node is falsy (empty), then return nothing
     if (!children) return null;
 
