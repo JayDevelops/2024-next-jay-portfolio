@@ -2,7 +2,7 @@ import {client} from "@/lib/sanity"
 import React from "react"
 import ProjectCard from "@/app/projects/ProjectCard"
 import {Metadata} from "next";
-import {HeadingOne} from "@/components/ui/Typography/headings/heading-one"
+import {Headers} from "@/components/ui/Typography/Headers"
 import {Text} from "@/components/ui/Typography/Text";
 
 export default async function Projects() {
@@ -11,9 +11,9 @@ export default async function Projects() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between my-4 p-12">
             <section className="py-12 flex flex-col items-center text-center">
-                <HeadingOne color="primary">
+                <Headers color="primary">
                     Projects Page
-                </HeadingOne>
+                </Headers>
                 <Text className="text-muted-foreground" variant="large">
                     Pulvinar maximus sodales facilisi pellentesque fringilla potenti efficitur sem libero dictumst eget
                 </Text>
