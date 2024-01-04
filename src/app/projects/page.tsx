@@ -2,8 +2,8 @@ import {client} from "@/lib/sanity"
 import React from "react"
 import ProjectCard from "@/app/projects/ProjectCard"
 import {Metadata} from "next";
-import {HeadingOneH1} from "@/components/Typography/headings/heading-one"
-import {Text} from "@/components/Typography/Text";
+import {HeadingOneH1} from "@/components/ui/Typography/headings/heading-one"
+import {Text} from "@/components/ui/Typography/Text";
 
 export default async function Projects() {
     const projectOverviewData: ProjectOverviewData[] = await getProjectOverviews()
