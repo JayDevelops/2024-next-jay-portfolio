@@ -79,7 +79,7 @@ const ProjectTags = ({ tags }: { tags: string[] }) => {
     return tags.map((tag, index) => (
         <span
             key={index}
-            className={`inline-block px-2 mr-2 text-base md:text-sm ${tagStyles[tag.toLowerCase()]}`}
+            className={`inline-block px-2 mr-2 text-base md:text-sm ${tagStyles[tag.toLowerCase()]} `}
         >
             #{tag}
         </span>

@@ -2,6 +2,8 @@ import {client} from "@/lib/sanity"
 import React from "react"
 import ProjectCard from "@/app/projects/ProjectCard"
 import {Metadata} from "next";
+import {HeadingOneH1} from "@/components/Typography/headings/heading-one"
+import {Text} from "@/components/Typography/Text";
 
 export default async function Projects() {
     const projectOverviewData: ProjectOverviewData[] = await getProjectOverviews()
@@ -9,13 +11,12 @@ export default async function Projects() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between my-4 p-12">
             <section className="py-12 flex flex-col items-center text-center">
-                <h1 className="text-4xl font-bold text-primary text-center">
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                <HeadingOneH1 color="primary">
                     Projects Page
-                </h1>
-                <p className="text-2xl text-muted-foreground px-2">
+                </HeadingOneH1>
+                <Text className="text-muted-foreground" variant="large">
                     Pulvinar maximus sodales facilisi pellentesque fringilla potenti efficitur sem libero dictumst eget
-                </p>
+                </Text>
             </section>
 
             <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10">
