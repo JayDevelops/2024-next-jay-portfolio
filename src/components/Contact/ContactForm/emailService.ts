@@ -10,8 +10,8 @@ interface EmailForm {
 export async function sendEmail(emailData: EmailForm) {
     try {
         return await emailjs.send(
-            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
             {
                 from_name: emailData.name,
                 to_name: "Jesus Perez",
