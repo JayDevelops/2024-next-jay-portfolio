@@ -1,11 +1,12 @@
-import {DownloadIcon} from "@radix-ui/react-icons";
-import {Button} from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import React from "react";
+import Link from "next/link";
+import {DownloadIcon} from "@radix-ui/react-icons";
 
 export default function DownloadResume() {
     return (
-        <Button>
+        <Link className={buttonVariants({ variant: "outline" })} href="/static/JesusPerez_SoftwareEngineer_2023.pdf" target="_blank">
             Download Resume &nbsp; <DownloadIcon />
-        </Button>
+        </Link>
     )
 }
