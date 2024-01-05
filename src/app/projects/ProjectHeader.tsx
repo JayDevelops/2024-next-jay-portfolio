@@ -8,8 +8,10 @@ export default function ProjectHeader() {
             <HeadingOne color="primary">
                 Full Stack Developer
             </HeadingOne>
-            <Text className="text-muted-foreground" variant="large">
-                Jesus Perez focuses on building full-stack web applications and mobile applications.
+            <Text className="text-muted-foreground my-2 lg:w-[95%]" variant="large">
+                I bring extensive expertise in crafting dynamic web applications using cutting-edge technologies such as Next.js, ReactJS, PHP, and WordPress.
+                My proficiency extends to working with advanced tools and databases, including Prisma, React Query, MySQL, and MongoDB. My primary focus is on utilizing
+                Next.js in conjunction with ReactJS to develop aesthetically pleasing and highly functional web solutions. Check out some featured projects below.
             </Text>
         </>
     )
