@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Contact() {
 
     return (
-        <div>
+        <div className="my-12">
             <Container>
                 <ContactHeader />
                 <RenderContactForm />

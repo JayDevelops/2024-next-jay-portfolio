@@ -1,6 +1,7 @@
 import contactDetails from "@/components/Contact/ContactHeader/ContactDetails/contactDetails"
 import Link from "next/link"
 import React from "react"
+import {HeadingThree} from "@/components/ui/Typography/Headers";
 
 interface ListItem {
     text: string
@@ -30,9 +31,9 @@ export default function ContactListColumn() {
         <>
             {contactDetails.map((contactItem, index) => (
                 <div key={`${contactItem.title}-${index}`} className="md:col-span-1">
-                    <h3 className="text-muted-foreground border-b-2 border-primary rounded-br-lg text-lg uppercase w-2/3 md:w-5/6">
+                    <HeadingThree color="muted-foreground" >
                         {contactItem.title}
-                    </h3>
+                    </HeadingThree>
                     <ContactItems listItems={contactItem.listItems}/>
                 </div>
             ))}

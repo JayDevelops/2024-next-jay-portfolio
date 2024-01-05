@@ -8,12 +8,12 @@ export default async function Projects() {
     const projectOverviewData: ProjectOverviewData[] = await getProjectOverviews()
 
     return (
-        <div>
-            <section className="py-12 flex flex-col items-right text-center">
+        <div className="my-20 grid grid-cols-2 gap-8">
+            <section className="flex flex-col items-right text-left col-span-2">
                 <ProjectHeader />
             </section>
 
-            <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10">
+            <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 col-span-2">
                 {projectOverviewData.map((project) => (
                     <ProjectCard key={`project-card-${project._id}`} project={project} />
                 ))}

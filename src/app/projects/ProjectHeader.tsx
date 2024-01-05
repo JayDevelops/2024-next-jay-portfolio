@@ -6,9 +6,10 @@ export default function ProjectHeader() {
     return (
         <>
             <HeadingOne color="primary">
-                Projects Page
+                Full Stack Developer
             </HeadingOne>
             <Text className="text-muted-foreground" variant="large">
+                Jesus Perez focuses on building full-stack web applications and mobile applications.
                 
             </Text>
         </>
