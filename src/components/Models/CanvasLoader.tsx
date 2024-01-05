@@ -1,14 +1,11 @@
 "use client"
 import { Html, useProgress } from "@react-three/drei"
 import styles from './CanvasLoader.module.scss'
+import Skeleton from "react-loading-skeleton";
 
 export default function CanvasLoader(){
     const { progress } = useProgress()
     return (
-        <Html className={styles.canvasLoader}>
-            <div className={styles.loadingText}>
-                {`Loading: ${progress.toFixed(2)}%`}
-            </div>
-        </Html>
+        <Skeleton height="15rem"/>
     )
 }

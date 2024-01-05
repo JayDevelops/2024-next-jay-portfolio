@@ -6,20 +6,24 @@ import DownloadResume from "@/app/about/DownloadResume"
 export default function Projects() {
     return (
         <div className="my-24">
-            <section className="grid-cols-2 gap-5">
+            <section className="grid-cols-2 gap-5 mb-12">
                 <AboutMeHeaders />
                 <br />
                 <DownloadResume />
             </section>
 
-            <section className="flex flex-col col-span-2">
-                <div className="mt-12 col-span-2 mb-6">
-                    <HeadingThree className="text-center">
+            <section className="flex flex-col col-span-2 gap-8">
+                <div className="col-span-2">
+                    <HeadingThree className="text-center mb-4">
                         My Experiences
                     </HeadingThree>
-                </div>
-                <div className="col-span-2">
                     <ExperienceTimeline/>
+                </div>
+
+                <div className="col-span-2">
+                    <HeadingThree className="text-center mb-4">
+                        My Skills
+                    </HeadingThree>
                 </div>
             </section>
         </div>

@@ -31,7 +31,7 @@ export default function Earth() {
                 position: [-4, 3, 6]
             }}
         >
-            <Suspense fallback={<CanvasLoader />} >
+            {/*<Suspense fallback={<CanvasLoader />} >*/}
                 <OrbitControls
                     autoRotate
                     enableZoom={false}
@@ -39,7 +39,7 @@ export default function Earth() {
                     minPolarAngle={Math.PI / 2}
                 />
                 <EarthMesh />
-            </Suspense>
+            {/*</Suspense>*/}
         </Canvas>
     )
 }
