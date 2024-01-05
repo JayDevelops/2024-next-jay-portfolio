@@ -1,9 +1,8 @@
 import React from 'react'
 import RenderContactForm from "@/components/Contact/RenderContactForm"
 import ContactHeader from "@/components/Contact/ContactHeader/ContactHeader"
-import {Metadata} from "next";
-import Container from "@/components/Container";
-
+import {Metadata} from "next"
+import Container from "@/components/Container"
 
 export default function Contact() {
     return (
