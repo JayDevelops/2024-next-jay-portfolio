@@ -25,7 +25,7 @@ export const colorClass = {
     "accent-foreground": "text-accent-foreground",
 }
 
-export function Headers({ children, color = "primary", classNames = "" }: HeadingVariantProps) {
+export function HeadingOne({ children, color = "primary", classNames = "" }: HeadingVariantProps) {
     // If the passed children react node is falsy (empty), then return nothing
     if (!children) return null;
 

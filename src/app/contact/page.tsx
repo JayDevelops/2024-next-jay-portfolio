@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 export default function Contact() {
 
     return (
-        <main className="contact-page mt-12">
+        <div>
             <Container>
                 <ContactHeader />
                 <RenderContactForm />
             </Container>
-        </main>
+        </div>
     )
 }

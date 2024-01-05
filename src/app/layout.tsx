@@ -31,9 +31,11 @@ export default function RootLayout({
           disableTransitionOnChange
       >
         <DynamicNavigation />
+        <main className="flex min-h-screen flex-col items-center justify-between my-4 p-12">
           {children}
+        </main>
       </ThemeProvider>
-      </body>
+    </body>
     </html>
   )
 }

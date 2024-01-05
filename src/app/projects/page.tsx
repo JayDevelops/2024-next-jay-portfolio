@@ -1,22 +1,16 @@
 import {client} from "@/lib/sanity"
 import React from "react"
 import ProjectCard from "@/app/projects/ProjectCard"
-import {Metadata} from "next";
-import {Headers} from "@/components/ui/Typography/Headers"
-import {Text} from "@/components/ui/Typography/Text";
+import {Metadata} from "next"
+import ProjectHeader from "@/app/projects/ProjectHeader"
 
 export default async function Projects() {
     const projectOverviewData: ProjectOverviewData[] = await getProjectOverviews()
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between my-4 p-12">
-            <section className="py-12 flex flex-col items-center text-center">
-                <Headers color="primary">
-                    Projects Page
-                </Headers>
-                <Text className="text-muted-foreground" variant="large">
-                    Pulvinar maximus sodales facilisi pellentesque fringilla potenti efficitur sem libero dictumst eget
-                </Text>
+        <div>
+            <section className="py-12 flex flex-col items-right text-center">
+                <ProjectHeader />
             </section>
 
             <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10">
@@ -24,7 +18,7 @@ export default async function Projects() {
                     <ProjectCard key={`project-card-${project._id}`} project={project} />
                 ))}
             </div>
-        </main>
+        </div>
     )
 }
 
