@@ -10,7 +10,7 @@ export default function HeroRightButtons() {
 
             <MotionButton buttonVariant={'default'} buttonText={'Contact Me'} icon={EnvelopeOpenIcon} />
 
-            <MotionButton buttonVariant={'secondary'} buttonText={'All my projects'} icon={BackpackIcon} />
+            <MotionButton buttonVariant={'secondary'} buttonText={'All my skills'} icon={BackpackIcon} />
         </div>
     )
 }
