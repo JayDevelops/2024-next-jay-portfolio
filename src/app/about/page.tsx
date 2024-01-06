@@ -2,10 +2,8 @@ import ExperienceTimeline from "@/app/about/ExperienceTimeline"
 import { HeadingThree} from "@/components/ui/Typography/Headers"
 import AboutMeHeaders from "@/app/about/AboutMeHeaders"
 import DownloadResume from "@/app/about/DownloadResume"
-import delay from "delay"
 
 export default async function Projects() {
-    await delay(8000)
     return (
         <div className="my-24">
             <section className="grid-cols-2 gap-5 mb-12">

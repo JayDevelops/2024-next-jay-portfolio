@@ -7,7 +7,13 @@ export default function Hero() {
     const DynamicComputerModel: React.ComponentType<{}> = dynamic(() => import(
         "@/components/Models/Computer/Computer"),
         {
-            loading: () => <CanvasLoader />,
+            loading: () => {
+                return (
+                    <div className="md:w-[700px] md:h-[240px] h-[180px] w-[500px] md:relative">
+                        <CanvasLoader height="15rem" />
+                    </div>
+                )
+            },
             ssr: false,
         }
     )
