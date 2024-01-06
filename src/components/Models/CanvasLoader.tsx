@@ -1,11 +1,17 @@
 "use client"
-import { Html, useProgress } from "@react-three/drei"
-import styles from './CanvasLoader.module.scss'
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 
-export default function CanvasLoader(){
-    const { progress } = useProgress()
+interface CanvasLoaderProps {
+    width?: number | string,
+    height?: number | string,
+}
+
+export default function CanvasLoader({height, width}: CanvasLoaderProps){
+
     return (
-        <Skeleton height="15rem"/>
+        <SkeletonTheme baseColor="hsl(var(--foreground))" highlightColor="hsl(var(--primary))">
+            <Skeleton height={height} width={width} />
+        </SkeletonTheme>
     )
 }

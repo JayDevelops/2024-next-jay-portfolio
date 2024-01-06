@@ -2,12 +2,18 @@
 import ContactForm from "@/components/Contact/ContactForm/ContactForm"
 import {Toaster} from "sonner"
 import dynamic from "next/dynamic"
-import React from "react"
-import {HeadingTwo} from "@/components/ui/Typography/Headers";
+import {HeadingTwo} from "@/components/ui/Typography/Headers"
+import CanvasLoader from "@/components/Models/CanvasLoader";
 
 export default function RenderContactForm() {
     const EarthDynamicComponent: React.ComponentType<{}> = dynamic(() => import("@/components/Models/Earth/Earth"), {
-        loading: () => <p>Loading...</p>,
+        loading: () => {
+            return (
+                <div className="mt-24 flex flex-col gap-8">
+                    <CanvasLoader height="20rem" />
+                </div>
+            )
+        },
         ssr: false,
     })
     return (

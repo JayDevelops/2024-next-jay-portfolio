@@ -10,9 +10,10 @@ interface CustomSkeletonProps {
     containerClassName?: string,
     containerTestId?: string,
     style?: React.CSSProperties,
-    height?: string,
+    height?: string | number,
+    width?: string | number,
 }
-export default function CustomSkeleton({ count, wrapper, circle, className, containerClassName, containerTestId, style, height }: CustomSkeletonProps) {
+export default function CustomSkeleton({ count, wrapper, circle, className, containerClassName, containerTestId, style, height, width }: CustomSkeletonProps) {
     return (
         <SkeletonTheme baseColor="hsl(var(--foreground))" highlightColor="hsl(var(--primary))">
             <Skeleton
@@ -24,6 +25,7 @@ export default function CustomSkeleton({ count, wrapper, circle, className, cont
                 containerTestId={containerTestId}
                 style={style}
                 height={height}
+                width={width}
             />
         </SkeletonTheme>
     );
