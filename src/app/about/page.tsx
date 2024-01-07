@@ -6,7 +6,7 @@ import {client} from "@/lib/sanity"
 import SkillColumns from "@/app/projects/SkillColumns";
 
 export default async function Projects() {
-    const skills: Skill[] = await getSkills()
+    const skills: Skill[] = await getStaticProps()
 
     return (
         <div className="my-24">
@@ -49,7 +49,7 @@ interface Skill {
     imageURL: string,
 }
 
-async function getSkills() {
+export async function getStaticProps() {
     try {
         const skillQuery = `*[_type=="skill"] {
             title,
