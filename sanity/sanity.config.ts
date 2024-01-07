@@ -3,6 +3,7 @@ import {visionTool} from '@sanity/vision'
 import {deskTool} from 'sanity/desk'
 import {schemaTypes} from './schemas'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 const devOnlyPlugins = [getStartedPlugin()]
 
@@ -13,7 +14,12 @@ export default defineConfig({
   projectId: 'bkirb3we',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [
+      deskTool(),
+    vercelDeployTool(),
+    visionTool(),
+    ...(isDev ? devOnlyPlugins : [])
+  ],
 
   schema: {
     types: schemaTypes,

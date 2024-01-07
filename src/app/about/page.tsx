@@ -45,6 +45,7 @@ interface Skill {
     _id: string,
     title: string,
     style: string,
+    learnedAt: string,
     imageURL: string,
 }
 
@@ -53,6 +54,7 @@ export async function getSkills() {
         const skillQuery = `*[_type=="skill"] {
             title,
             _id,
+            date,
             "imageURL": image.asset->url,
         }`
 

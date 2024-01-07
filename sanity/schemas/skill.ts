@@ -13,5 +13,11 @@ export default  {
             type: 'image',
             title: 'Image',
         },
+        {
+            name: 'learnedAt',
+            type: 'date',
+            title: 'Learned At',
+            description: 'The date when you started using this skill.',
+        },
     ],
 }
