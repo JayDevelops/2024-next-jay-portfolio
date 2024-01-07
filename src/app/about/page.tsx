@@ -49,7 +49,7 @@ interface Skill {
     imageURL: string,
 }
 
-export async function getSkills() {
+async function getSkills() {
     try {
         const skillQuery = `*[_type=="skill"] {
             title,

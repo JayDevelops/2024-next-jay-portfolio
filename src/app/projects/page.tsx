@@ -36,7 +36,7 @@ export interface ProjectOverviewData {
 }
 
 // GetProjectOverviews only grabs the overview for the cards and their slugs
-export async function getProjectOverviews() {
+async function getProjectOverviews() {
     const projectOverviewQuery = `*[_type=="project"] {
     title,
     overview,
