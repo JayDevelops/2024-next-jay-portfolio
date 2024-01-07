@@ -1,8 +1,8 @@
 // SkillColumns.tsx
 
-import Image from "next/image";
-import { Text } from "@/components/ui/Typography/Text";
-import { Skill } from "@/app/about/page";
+import Image from "next/image"
+import { Text } from "@/components/ui/Typography/Text"
+import { Skill } from "@/app/about/page"
 
 interface SkillColumnsProps {
     skills: Skill[];
