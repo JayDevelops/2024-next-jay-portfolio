@@ -13,10 +13,5 @@ export default  {
             type: 'image',
             title: 'Image',
         },
-        {
-          name: 'style',
-          type: 'string',
-          title: 'TailwindCSS Style',
-        },
     ],
 }

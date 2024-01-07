@@ -5,7 +5,7 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
     { title: "Home", path: "/" },
-    { title: "Projects", path: "/skills" },
+    { title: "Projects", path: "/projects" },
     //  COME BACK HERE TO BUILD BLOG
     // { title: "Blog", path: "/blog" },
     { title: "About", path: "/about" },

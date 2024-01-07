@@ -3,7 +3,7 @@ import {HeadingThree} from "@/components/ui/Typography/Headers"
 import AboutMeHeaders from "@/app/about/AboutMeHeaders"
 import DownloadResume from "@/app/about/DownloadResume"
 import {client} from "@/lib/sanity"
-import Image from "next/image"
+import SkillColumns from "@/app/projects/SkillColumns";
 
 export default async function Projects() {
     const skills: Skill[] = await getSkills()
@@ -29,17 +29,18 @@ export default async function Projects() {
                         My Skills
                     </HeadingThree>
 
-                    {skills.map((skill) => (
-                        <div key={skill._id}>
-                            <Image src={skill.imageURL} alt={skill.title} width={500} height={500}/>
-                            <p className={skill.style}>{skill.title}</p>
-                        </div>
-                    ))}
+                </div>
+            </section>
+
+            <section className="my-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full h-full bg-primary p-3 md:p-5 rounded-lg">
+                    <SkillColumns skills={skills} />
                 </div>
             </section>
         </div>
     )
 }
+
 interface Skill {
     _id: string,
     title: string,
@@ -48,11 +49,18 @@ interface Skill {
 }
 
 export async function getSkills() {
-    const skillQuery = `*[_type=="skill"] {
-        title,
-        _id,
-        style,
-        "imageURL": image.asset->url,
-    }`
-    return await client.fetch(skillQuery);
+    try {
+        const skillQuery = `*[_type=="skill"] {
+            title,
+            _id,
+            "imageURL": image.asset->url,
+        }`
+
+        return await client.fetch(skillQuery)
+    } catch (error) {
+        console.error('Error fetching skills:', error);
+        return error
+    }
 }
+
+export type {Skill}
