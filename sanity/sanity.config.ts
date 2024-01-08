@@ -10,6 +10,7 @@ const devOnlyPlugins = [getStartedPlugin()]
 export default defineConfig({
   name: 'default',
   title: 'Developer Portfolio',
+  basePath: "/admin",
 
   projectId: 'bkirb3we',
   dataset: 'production',
