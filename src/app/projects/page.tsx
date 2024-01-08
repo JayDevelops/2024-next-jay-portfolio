@@ -5,7 +5,19 @@ import {Metadata} from "next"
 import ProjectHeader from "@/app/projects/ProjectHeader";
 
 export default async function Projects() {
-    const projectOverviewData: ProjectOverviewData[] = await getStaticProps()
+    const projectOverviewQuery = `*[_type=="project"] {
+    title,
+    overview,
+    _id,
+    slug,
+    year,
+    link,
+    github_link,
+    "thumbnailURL": thumbnail.asset->url,
+    tags,
+    }
+    `
+    const projectOverviewData: ProjectOverviewData[] =  await client.fetch(projectOverviewQuery)
 
     return (
         <div className="my-20 grid grid-cols-2 gap-8">
@@ -33,23 +45,6 @@ export interface ProjectOverviewData {
     link: string,
     github_link?: string,
     tags: string[],
-}
-
-// GetProjectOverviews only grabs the overview for the cards and their slugs
-export async function getStaticProps() {
-    const projectOverviewQuery = `*[_type=="project"] {
-    title,
-    overview,
-    _id,
-    slug,
-    year,
-    link,
-    github_link,
-    "thumbnailURL": thumbnail.asset->url,
-    tags,
-    }
-    `
-    return await client.fetch(projectOverviewQuery)
 }
 
 export const metadata: Metadata = {

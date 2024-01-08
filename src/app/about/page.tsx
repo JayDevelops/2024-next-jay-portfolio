@@ -3,10 +3,17 @@ import {HeadingThree} from "@/components/ui/Typography/Headers"
 import AboutMeHeaders from "@/app/about/AboutMeHeaders"
 import DownloadResume from "@/app/about/DownloadResume"
 import {client} from "@/lib/sanity"
-import SkillColumns from "@/app/projects/SkillColumns";
+import SkillColumns from "@/app/projects/SkillColumns"
 
 export default async function Projects() {
-    const skills: Skill[] = await getStaticProps()
+    const skillQuery = `*[_type=="skill"] {
+            title,
+            _id,
+            date,
+            "imageURL": image.asset->url,
+        }`
+
+    const skills: Skill[] = await client.fetch(skillQuery)
 
     return (
         <div className="my-24">
@@ -49,20 +56,5 @@ interface Skill {
     imageURL: string,
 }
 
-export async function getStaticProps() {
-    try {
-        const skillQuery = `*[_type=="skill"] {
-            title,
-            _id,
-            date,
-            "imageURL": image.asset->url,
-        }`
-
-        return await client.fetch(skillQuery)
-    } catch (error) {
-        console.error('Error fetching skills:', error);
-        return error
-    }
-}
 
 export type {Skill}
