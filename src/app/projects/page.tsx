@@ -48,7 +48,7 @@ export interface ProjectOverviewData {
 }
 
 export const metadata: Metadata = {
-    title: 'Projects | Jesus Perez - Full Stack Web and Mobile Developer',
+    title: 'Projects',
     description:
         'Explore the portfolio of Jesus Perez, a skilled Web and Mobile Developer specializing in React, Vue, JavaScript, and React Native. Jesus delivers exceptional full-stack applications using modern technology stacks. Hire him for your next project!',
 }
