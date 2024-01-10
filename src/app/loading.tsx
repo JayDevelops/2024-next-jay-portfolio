@@ -7,7 +7,7 @@ export default function HomeLoading() {
             className="jay-hero-section mx-auto w-full h-full max-w-5xl px-6 pb-8 flex flex-col md:flex-row md:items-center justify-between md:h-screen md:max-h-[950px] md:max-w-7xl">
 
             <div className="md:w-2/5 md:pr-16 text-left order-2 md:order-1">
-                <Skeleton height="13rem"/>
+                <Skeleton className="h-6 md:h-12"/>
                 <br/>
 
                 <div className="grid grid-cols-4 gap-4">
