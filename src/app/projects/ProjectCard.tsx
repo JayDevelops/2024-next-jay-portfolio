@@ -43,9 +43,11 @@ export default function ProjectCard({ project }: { project: ProjectOverviewData 
                         <ProjectTags tags={tags}/>
                     </CardContent>
                     <CardFooter className="flex flex-row gap-3">
-                        <Button asChild variant="default">
-                            <Link href={project.link} target="_blank">View Live <span> &nbsp; </span> <Link2Icon/> </Link>
-                        </Button>
+                        {project.link && (
+                            <Button asChild variant="default">
+                                <Link href={project.link} target="_blank">View Live <span> &nbsp; </span> <Link2Icon/> </Link>
+                            </Button>
+                        )}
 
                         {project.github_link && (
                             <Button asChild variant="secondary">

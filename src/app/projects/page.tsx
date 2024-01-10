@@ -5,17 +5,16 @@ import {Metadata} from "next"
 import ProjectHeader from "@/app/projects/ProjectHeader";
 
 export default async function Projects() {
-    const projectOverviewQuery = `*[_type=="project"] {
-    title,
+    const projectOverviewQuery = `*[_type == "project"] | order(year desc) {
+  title,
+    year,
     overview,
     _id,
-    slug,
-    year,
     link,
     github_link,
-    "thumbnailURL": thumbnail.asset->url,
     tags,
-    }
+    "thumbnailURL": thumbnail.asset->url,
+}
     `
     const projectOverviewData: ProjectOverviewData[] =  await client.fetch(projectOverviewQuery)
 
