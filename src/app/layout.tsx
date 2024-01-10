@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import React from "react"
 import dynamic from "next/dynamic"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 const DynamicNavigation: React.ComponentType<{}> = dynamic(() => import("@/components/Navigation/Navigation"))
@@ -74,6 +75,7 @@ export default function RootLayout({
         <main className="flex min-h-screen flex-col items-center justify-between my-4 px-12 md:px-24 lg:px-32">
           {children}
           <SpeedInsights />
+          <Analytics />
         </main>
       </ThemeProvider>
     </body>
