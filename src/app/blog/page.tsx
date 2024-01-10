@@ -25,7 +25,7 @@ export default function Blog() {
 export const metadata: Metadata = {
     title: 'Blog',
     description:
-        'Exciting news! The blog section on Jesus Perez Arias\'s website is in the works and will be available soon. ' +
+        'Exciting news! The blog section on Jesus Perez Arias&#39s website is in the works and will be available soon. ' +
         'Stay tuned for insightful articles, industry updates, and personal experiences related to Full-Stack Development, Next.js, ReactJS, PHP, WordPress, and more. ' +
         'Explore the journey of a seasoned Full-Stack Software Engineer, and check back later to dive into the world of technology with Jesus Perez Arias.',
 }
