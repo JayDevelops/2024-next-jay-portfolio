@@ -4,6 +4,7 @@ import AboutMeHeaders from "@/app/about/AboutMeHeaders"
 import DownloadResume from "@/app/about/DownloadResume"
 import {client} from "@/lib/sanity"
 import SkillColumns from "@/app/projects/SkillColumns"
+import {Metadata} from "next";
 
 export default async function Projects() {
     const skillQuery = `*[_type=="skill"] {
@@ -47,7 +48,14 @@ export default async function Projects() {
         </div>
     )
 }
-
+export const metadata: Metadata = {
+    title: 'About',
+    description:
+        'About Jesus Perez: Holding a bachelor\'s degree in computer science from California State University, Los Angeles with over four-plus years of hands-on experience.' +
+        'Jesus has successfully delivered robust and scalable solutions across diverse projects. Encompassing a passion for mobile application development using React Native and Swift, ' +
+        'and full stack web development with Next.js and other modern tech features this is what a professional seasoned developer will bring to the table.' +
+        'Explore the journey of a seasoned Full-Stack Software Engineer, dive into the world of technology with Jesus Perez Arias.',
+}
 interface Skill {
     _id: string,
     title: string,
