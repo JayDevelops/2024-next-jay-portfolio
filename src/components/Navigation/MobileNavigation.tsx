@@ -1,7 +1,7 @@
 import {AnimatePresence, motion} from "framer-motion"
 import Link from "next/link"
 import * as React from "react"
-import menuItems from "@/components/Navigation/MenuItems/menuItems"
+import menuItems from "@/components/MenuItems/menuItems"
 import {accordion, listAccordion} from "@/components/Navigation/NavAnimate/NavAnimate"
 import {useState} from "react"
 

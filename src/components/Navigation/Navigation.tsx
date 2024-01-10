@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import ModeToggle from "@/components/ui/ToggleMode"
 import { Twirl as Hamburger } from 'hamburger-react'
-import MenuItemsList from "@/components/Navigation/MenuItems/MenuItemsList"
+import MenuItemsList from "@/components/MenuItems/MenuItemsList"
 import MobileNavigation from "@/components/Navigation/MobileNavigation"
 
 export default function Navbar() {
