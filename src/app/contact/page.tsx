@@ -16,5 +16,9 @@ export default async function Contact() {
 }
 export const metadata: Metadata = {
     title: 'Contact',
-    description: 'Experienced Full-Stack Software Engineer based in Los Angeles, California, offering expertise in Next.js, ReactJS, PHP, and WordPress. Over three years of hands-on experience developing robust and scalable solutions for diverse skills. Contact Jesus Perez for your software development needs.'
+    description:
+        'Connect with Jesus Perez Arias, an experienced Full-Stack Software Engineer based in Los Angeles, California. ' +
+        'Offering expertise in Next.js, ReactJS, PHP, and WordPress, with over four plus years of hands-on experience developing robust and scalable solutions for diverse projects. ' +
+        'Whether you have questions, project inquiries, or collaboration ideas, reach out to Jesus Perez for professional and reliable software development services. ' +
+        'Transform your digital ideas into reality with a skilled and dedicated developer. Contact Jesus Perez today.',
 }

@@ -50,5 +50,12 @@ export interface ProjectOverviewData {
 export const metadata: Metadata = {
     title: 'Projects',
     description:
-        'Explore the portfolio of Jesus Perez, a skilled Web and Mobile Developer specializing in React, Vue, JavaScript, and React Native. Jesus delivers exceptional full-stack applications using modern technology stacks. Hire him for your next project!',
+        'Meet Jesus Perez Arias, a seasoned Full-Stack Software Engineer based in Montebello, California; ' +
+        'With over four years of hands-on experience and a bachelor\'s degree in computer science from California State University, Los Angeles, ' +
+        'I specialize in crafting dynamic web applications using cutting-edge technologies such as Next.js, ReactJS, PHP, and WordPress. ' +
+        'My proficiency extends to working with advanced tools and databases, including Prisma, React Query, MySQL, and MongoDB. ' +
+        'Driven by a passion for innovation, I focus on utilizing Next.js in conjunction with ReactJS to develop aesthetically pleasing and highly functional web solutions. ' +
+        'Beyond web development, my skill set encompasses mobile application development using React Native and Swift, enabling the creation of exceptional and user-friendly mobile applications. ' +
+        'Currently seeking new opportunities for professional growth, I am available for freelance work, eager to contribute my expertise to various projects. ' +
+        'With a commitment to delivering outstanding results, I look forward to collaborating on innovative projects and further enhancing skills in full-stack development- hire me for any software engineer opportunities.',
 }
