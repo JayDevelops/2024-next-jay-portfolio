@@ -9,7 +9,7 @@ export default function Hero() {
         {
             loading: () => {
                 return (
-                    <div className="md:w-[700px] md:h-[240px] h-[180px] w-[500px] md:relative">
+                    <div className="md:w-[700px] md:h-[240px] h-[180px] w-[500px] md:relative px-4">
                         <CanvasLoader height="10rem" />
                     </div>
                 )
