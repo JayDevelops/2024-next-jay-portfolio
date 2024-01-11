@@ -7,6 +7,7 @@ import {Tilt} from "react-tilt"
 import {GitHubLogoIcon, Link2Icon} from "@radix-ui/react-icons"
 import {ProjectOverviewData} from "@/app/projects/page"
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} from "@/components/ui/card"
+import {Text} from "@/components/ui/Typography/Text";
 
 export default function ProjectCard({ project }: { project: ProjectOverviewData }) {
     //  Pass the tags to the ProjectTags component
@@ -42,17 +43,20 @@ export default function ProjectCard({ project }: { project: ProjectOverviewData 
                     <CardContent>
                         <ProjectTags tags={tags}/>
                     </CardContent>
-                    <CardFooter className="flex flex-row gap-3">
+                    <CardFooter className="grid grid-cols-2 gap-8">
                         {project.link && (
-                            <Button asChild variant="default">
+                            <Button asChild variant="default" className="col-span-1 ">
                                 <Link href={project.link} target="_blank">View Live <span> &nbsp; </span> <Link2Icon/> </Link>
                             </Button>
                         )}
 
                         {project.github_link && (
-                            <Button asChild variant="secondary">
+                            <Button asChild variant="secondary" className="col-span-1">
                                 <Link href={project.github_link} target="_blank"> Project Repo <span> &nbsp; </span> <GitHubLogoIcon/> </Link>
                             </Button>
+                        )}
+                        {project.year && (
+                            <Text variant="small" className="text-muted-foreground col-span-2">Created at: {project.year}</Text>
                         )}
                     </CardFooter>
                 </Card>
