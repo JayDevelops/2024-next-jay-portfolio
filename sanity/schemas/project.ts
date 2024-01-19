@@ -49,12 +49,14 @@ export default {
             options: {
                 list: [
                     { title: 'JavaScript', value: 'javascript' },
+                    { title: 'TypeScript', value: 'typescript' },
                     { title: 'Next.js', value: 'nextjs' },
                     { title: 'Vue.js', value: 'vuejs' },
                     { title: 'ReactJS', value: 'reactjs' },
                     { title: 'SASS', value: 'sass' },
                     { title: 'CSS', value: 'css' },
                     { title: 'Bootstrap', value: 'bootstrap' },
+                    { title: 'ShadCN', value: 'shadcn' },
                     { title: 'TailwindCSS', value: 'tailwindcss' },
                     { title: 'Sanity CMS', value: 'sanity' },
                     { title: 'Prisma', value: 'prisma' },
@@ -63,6 +65,7 @@ export default {
                     { title: 'Swift', value: 'swift' },
                     { title: 'React Native', value: 'react-native' },
                     { title: 'Wordpress', value: 'wordpress' },
+                    { title: 'SQL', value: 'sql' },
                 ],
                 layout: 'checkbox',
             },

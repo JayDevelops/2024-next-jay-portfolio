@@ -68,18 +68,21 @@ export default function ProjectCard({ project }: { project: ProjectOverviewData 
 const ProjectTags = ({ tags }: { tags: string[] }) => {
     const tagStyles: Record<string, string> = {
         javascript: "text-yellow-500",
+        typescript: "text-blue-300",
         vuejs: "text-green-500",
         reactjs: "text-blue-500",
         nextjs: "text-blue-500",
         sass: "text-pink-400",
         css: "text-blue-500",
         tailwindcss: "text-blue-500",
+        shadcn: "text-secondary-foreground/80",
         sanity: "text-amber-500",
         mongodb: "text-emerald-400 dark:text-emerald-600",
         php: "text-slate-600 dark:text-slate-300",
         swift: "text-orange-500",
         reactNative: "text-indigo-500",
         wordpress: "text-muted-foreground",
+        sql: "text-muted-foreground/80",
     }
 
     return tags.map((tag, index) => (

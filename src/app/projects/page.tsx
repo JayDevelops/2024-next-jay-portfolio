@@ -6,7 +6,7 @@ import ProjectHeader from "@/app/projects/ProjectHeader";
 
 export default async function Projects() {
     const projectOverviewQuery = `*[_type == "project"] | order(year desc) {
-  title,
+    title,
     year,
     overview,
     _id,
@@ -17,6 +17,7 @@ export default async function Projects() {
 }
     `
     const projectOverviewData: ProjectOverviewData[] =  await client.fetch(projectOverviewQuery)
+    console.log(projectOverviewData)
 
     return (
         <div className="my-20 grid grid-cols-2 gap-8">
