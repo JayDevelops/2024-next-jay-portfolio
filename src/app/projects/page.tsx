@@ -17,7 +17,6 @@ export default async function Projects() {
 }
     `
     const projectOverviewData: ProjectOverviewData[] =  await client.fetch(projectOverviewQuery)
-    console.log(projectOverviewData)
 
     return (
         <div className="my-20 grid grid-cols-2 gap-8">
